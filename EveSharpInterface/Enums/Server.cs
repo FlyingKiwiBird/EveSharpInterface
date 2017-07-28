@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EveSharpInterface
+namespace EveSharpInterface.Enums
 {
-    public class Class1
-    {
-    }
+  public enum Server
+  {
+    Tranquility,
+    Singularity
+  }
 }

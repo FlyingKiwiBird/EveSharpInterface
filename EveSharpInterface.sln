@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EveSharpInterface", "EveSharpInterface\EveSharpInterface.csproj", "{BBF9D266-34A8-4804-A188-E098B931B2F3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EveSharpInterfaceTests", "EveSharpInterface.Tests\EveSharpInterfaceTests.csproj", "{5BFAF08F-B059-47EB-99DD-4B4591B3E544}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{BBF9D266-34A8-4804-A188-E098B931B2F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BBF9D266-34A8-4804-A188-E098B931B2F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BBF9D266-34A8-4804-A188-E098B931B2F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BFAF08F-B059-47EB-99DD-4B4591B3E544}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BFAF08F-B059-47EB-99DD-4B4591B3E544}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BFAF08F-B059-47EB-99DD-4B4591B3E544}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BFAF08F-B059-47EB-99DD-4B4591B3E544}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
