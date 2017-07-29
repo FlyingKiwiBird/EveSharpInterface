@@ -14,9 +14,9 @@ namespace EveSharpInterface.SSO
       string scopeString = "";
       foreach (var scope in _scopes)
       {
-        scopeString += scope.Identifier + ",";
+        scopeString += scope.Identifier + " ";
       }
-      scopeString = scopeString.TrimEnd(',');
+      scopeString = scopeString.TrimEnd();
       return scopeString;
     }
 
