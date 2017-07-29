@@ -36,15 +36,14 @@ namespace EveSharpInterface.Operations.Fittings
     }
 
 
-    public async Task<dynamic> ExecuteAsync()
+    public async Task<JContainer> ExecuteAsync()
     {
       HttpRequestMessage request = ESIConnection.getRequest(this, _authorization.EveServer, _authorization);
       HttpClient client = ESIClient.client;
       var clientResponse = await client.SendAsync(request);
       var jsonResponse = await clientResponse.Content.ReadAsStringAsync();
-      dynamic json = JToken.Parse(jsonResponse);
-      
-      return json;
+
+      return JParser.parse(jsonResponse);
     }
 
     public string GetEndpoint()

@@ -5,6 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using EveSharpInterface.SSO;
 using EveSharpInterface.SSO.Scopes;
 using EveSharpInterface.Operations.Fittings;
+using Newtonsoft.Json.Linq;
 
 namespace EveSharpInterface.Tests
 {
@@ -32,8 +33,9 @@ namespace EveSharpInterface.Tests
       GetCharacterFittings fitting = new GetCharacterFittings(_authorization, charIdTask.Result);
       var fittingTask = fitting.ExecuteAsync();
       fittingTask.Wait();
-      dynamic json = fittingTask.Result;
-      Assert.Inconclusive("Can't test dynamic variables?");
+      JContainer json = fittingTask.Result;
+      string name = (string)json[0]["name"];
+      Assert.IsNotNull(name);
     }
   }
 }

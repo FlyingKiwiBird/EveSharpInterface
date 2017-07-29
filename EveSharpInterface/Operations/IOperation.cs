@@ -8,6 +8,7 @@ using Newtonsoft.Json;
 using static EveSharpInterface.Operations.OperationEvents;
 using EveSharpInterface.Enums;
 using System.Net.Http;
+using Newtonsoft.Json.Linq;
 
 namespace EveSharpInterface
 {
@@ -15,7 +16,7 @@ namespace EveSharpInterface
   {
     HttpMethod Verb { get; }
 
-    Task<dynamic> ExecuteAsync();
+    Task<JContainer> ExecuteAsync();
     string GetEndpoint();
   }
 }
