@@ -10,6 +10,6 @@ namespace EveSharpInterface.Operations
   public interface IAuthenticatedOperation : IOperation
   {
     Scope RequiredScope { get; }
-    Auth GetAuthorization();
+    OAuth GetAuthorization();
   }
 }

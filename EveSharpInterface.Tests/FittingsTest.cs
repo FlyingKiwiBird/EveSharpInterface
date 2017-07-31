@@ -3,9 +3,9 @@ using System.Text;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using EveSharpInterface.SSO;
-using EveSharpInterface.SSO.Scopes;
 using EveSharpInterface.Operations.Fittings;
 using Newtonsoft.Json.Linq;
+using EveSharpInterface.Scopes;
 
 namespace EveSharpInterface.Tests
 {
@@ -13,11 +13,11 @@ namespace EveSharpInterface.Tests
   [TestClass]
   public class FittingsTest
   {
-    private Auth _authorization;
+    private OAuth _authorization;
     [TestInitialize]
     public void Setup()
     {
-      _authorization = new Auth();
+      _authorization = new OAuth();
       ScopeCollection sc = new ScopeCollection();
       sc.Add(Fittings.Read);
       sc.Add(Fittings.Write);

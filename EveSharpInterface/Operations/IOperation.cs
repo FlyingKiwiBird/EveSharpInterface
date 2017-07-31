@@ -18,5 +18,6 @@ namespace EveSharpInterface
 
     Task<JContainer> ExecuteAsync();
     string GetEndpoint();
+    JContainer GetCachedResults();
   }
 }

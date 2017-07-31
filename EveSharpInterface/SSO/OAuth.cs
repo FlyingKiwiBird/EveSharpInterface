@@ -14,7 +14,7 @@ using Newtonsoft.Json.Linq;
 
 namespace EveSharpInterface.SSO
 {
-  public class Auth
+  public class OAuth
   {
 
     private HttpListener _authServer = new HttpListener();
@@ -26,7 +26,7 @@ namespace EveSharpInterface.SSO
     private string _clientSecret;
     private string _characterId;
 
-    public delegate void AuthorizationHandler(Auth e);
+    public delegate void AuthorizationHandler(OAuth e);
     public event AuthorizationHandler onAuthorizationSuccess;
     public event AuthorizationHandler onAuthorizationFailure;
 
@@ -36,7 +36,7 @@ namespace EveSharpInterface.SSO
     public Server EveServer { get; private set; }
     public string Base64Login { get; private set; }
 
-    public Auth()
+    public OAuth()
     {
       EveServer = Server.Tranquility;
     }

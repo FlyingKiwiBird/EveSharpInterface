@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FittingsTest.cs" />
+    <Compile Include="LocationTest.cs" />
     <Compile Include="SSOTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

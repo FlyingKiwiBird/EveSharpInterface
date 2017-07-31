@@ -14,9 +14,9 @@ namespace EveSharpInterface.Util
   public static class ESIConnection
   {
 
-    public static HttpRequestMessage getRequest(IOperation operation, Server server, Auth authentication = null)
+    public static HttpRequestMessage getRequest(IOperation operation, Server server, OAuth authentication = null, string version = "latest")
     {
-      string hostname = @"https://esi.tech.ccp.is/latest";
+      string hostname = @"https://esi.tech.ccp.is/" + version;
       string datasource = "";
 
       switch(server)
