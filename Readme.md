@@ -1,4 +1,4 @@
-### Eve Sharp Interface
+# Eve Sharp Interface
 
 Eve Sharp Interface is a wrapper for the ESI API for Eve Online.  Documentation for that API can be found here:
 
@@ -12,11 +12,11 @@ This library provides a class that handles authentication through Eve's SSO/OAut
 
 ## Operations
 
-# Fittings
+### Fittings
 
 * GetCharacterFittings
 
-# Location
+### Location
 
 * GetCharacterLocation
 * GetOnlineStatus
