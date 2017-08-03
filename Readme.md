@@ -6,6 +6,14 @@ https://esi.tech.ccp.is/latest/
 
 This library is aimed at facilitating the retrieval and formatting of data as well as preform common tasks, such as SSO.
 
+## Requirements
+
+[JSON.Net](http://www.newtonsoft.com/json):
+
+  - `Install-Package Newtonsoft.Json`
+
+[Eve 3rd party application](https://developers.eveonline.com/applications)
+
 ## Authentication
 
 This library provides a class that handles authentication through Eve's SSO/OAuth interface to retrieve the Access Token utilized in authenticated ESI calls including easy addition of scopes.
