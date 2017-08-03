@@ -19,9 +19,9 @@ namespace EveSharpInterface.Operations.Fittings
     public override HttpMethod Verb => HttpMethod.Get;
 
 
-    public GetCharacterFittings(OAuth authorization, string characterId)
+    public GetCharacterFittings(OAuth authentication, string characterId)
     {
-      _authorization = authorization;
+      Authentication = authentication;
       _characterId = characterId;
     }
 

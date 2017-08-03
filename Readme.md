@@ -19,4 +19,5 @@ This library provides a class that handles authentication through Eve's SSO/OAut
 ### Location
 
 * GetCharacterLocation
-* GetOnlineStatus
+* GetCharacterOnline
+* GetCurrentShip

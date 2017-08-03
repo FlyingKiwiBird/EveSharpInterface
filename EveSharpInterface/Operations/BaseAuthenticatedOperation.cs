@@ -12,8 +12,28 @@ namespace EveSharpInterface.Operations
 {
   public class BaseAuthenticatedOperation : IAuthenticatedOperation
   {
-    internal OAuth _authorization;
-    internal JContainer _results;
+    public OAuth Authentication
+    {
+      get
+      {
+        return _authentication;
+      }
+
+      protected set
+      {
+        if (value.HasScope(RequiredScope))
+        {
+          _authentication = value;
+        }
+        else
+        {
+          throw new ScopeRequiredException(RequiredScope);
+        }
+      }
+    }
+
+    private OAuth _authentication;
+    protected JContainer _results;
 
     public virtual Scope RequiredScope => throw new NotImplementedException();
   
@@ -22,26 +42,22 @@ namespace EveSharpInterface.Operations
 
     public virtual async Task<JContainer> ExecuteAsync()
     {
-      var results = await GetRawResults();
+      HttpRequestMessage request = ESIConnection.getRequest(this, _authentication.EveServer, _authentication);
+
+      var results = await GetRawResults(request);
 
       _results = JParser.parse(results);
 
       return _results;
     }
 
-    internal virtual async Task<string> GetRawResults()
+    internal virtual async Task<string> GetRawResults(HttpRequestMessage request)
     {
-      HttpRequestMessage request = ESIConnection.getRequest(this, _authorization.EveServer, _authorization);
       HttpClient client = ESIClient.client;
       var clientResponse = await client.SendAsync(request);
       return await clientResponse.Content.ReadAsStringAsync();
     }
 
-
-    public virtual OAuth GetAuthorization()
-    {
-      return _authorization;
-    }
 
     public virtual JContainer GetCachedResults()
     {

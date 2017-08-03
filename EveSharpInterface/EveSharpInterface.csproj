@@ -49,7 +49,8 @@
     <Compile Include="Operations\IAuthenticatedOperation.cs" />
     <Compile Include="Operations\IOperation.cs" />
     <Compile Include="Operations\Location\GetCharacterLocation.cs" />
-    <Compile Include="Operations\Location\GetOnlineStatus.cs" />
+    <Compile Include="Operations\Location\GetCurrentShip.cs" />
+    <Compile Include="Operations\Location\GetCharacterOnline.cs" />
     <Compile Include="Operations\OperationEvents.cs" />
     <Compile Include="Operations\ScopeRequiredException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

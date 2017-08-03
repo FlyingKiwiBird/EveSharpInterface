@@ -18,9 +18,9 @@ namespace EveSharpInterface.Operations.Location
     public override HttpMethod Verb => HttpMethod.Get;
 
 
-    public GetCharacterLocation(OAuth authorization, string characterId)
+    public GetCharacterLocation(OAuth authentication, string characterId)
     {
-      _authorization = authorization;
+      Authentication = authentication;
       _characterId = characterId;
     }
 
